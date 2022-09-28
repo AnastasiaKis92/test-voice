@@ -1,0 +1,88 @@
+@keyframes levitate
+    0%
+        transform: translateY(15px)
+    100%
+        transform: translateY(0)
+
+@keyframes move-girl
+    100%
+        transform: translateY(0)
+
+@keyframes move-gap
+    from
+        opacity: 0
+    50%
+        width: 280px
+    to
+        opacity: 1
+
+.animation
+    position: relative
+    align-self: center
+    overflow: hidden
+
+.animation__gap
+    position: relative
+    width: 193px
+    height: 80px
+    margin: 0 auto
+    &::after
+        content: ''
+        position: absolute
+        top: -40px
+        left: 50%
+        transform: translate(-50%, 0)
+        width: 193px
+        height: 161px
+        background-image: url('../images/svg-sprites/sprite.svg#ellipse')
+        background-repeat: no-repeat
+        animation-name: move-gap
+        animation-duration: 6.2s
+        animation-timing-function: easeOutSine
+        z-index: -2
+
+.animation__girl
+    position: relative
+    width: 289px
+    height: 756px
+    animation-name: levitate
+    animation-duration: 2s
+    animation-direction: alternate
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+    z-index: -1
+    & img
+        transform: translateY(843px)
+        animation-name: move-girl
+        animation-duration: 3s
+        animation-delay: 1s
+        animation-fill-mode: forwards
+        animation-timing-function: ease-in-out
+        z-index: -3
+
+.animation__layer
+    position: absolute
+    top: 775px
+    left: 50%
+    width: 320px
+    height: 830px
+    transform: translate(-50%, 0)
+    background-image: url('../images/rectangle.png')
+    background-repeat: no-repeat
+    background-position: center
+    z-index: -1
+
+@media (min-width: $desktop-width)
+    .animation
+        grid-column: 2/3
+        grid-row: 1/6
+        justify-self: center
+
+    .animation__girl
+        width: 435px
+        height: auto
+        text-align: center
+
+    .animation__layer
+        top: 781px
+

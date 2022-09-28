@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="preload"
+      href="fonts/ubuntu.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    >
+  <link rel="stylesheet" href="css/styles.min.css">
+  <title>Тестовое задание_voice control</title>
+</head>
+<body class="page__body">
+  <section class="voice container">
+    <h1 class="voice__title">Yamaguchi Voice Control</h1>
+    <p class="voice__text">Вы можете управлять программами массажа или самим креслом с помощью голосовых команд, приведённых ниже. Коснитесь кратковременно кнопки голосового управления, расположенной на левом подлокотнике, для запуска сеанса голосового управления.</p>
+    <p class="voice__text">Произнесите одну из доступных команд. Если произнесённая команда распознана, вы услышите ответ и кресло приступит к выполнению запроса.</p>
+
+    <div class="voice__animation animation">
+      <div class="animation__girl">
+        <picture>
+          <source type="image/webp" srcset="images/girl.webp, images/girl@2x.webp 2x">
+          <img loading="lazy" src="images/girl.png" srcset="images/girl@2x.png 2x" alt="Изображение девушки" width="289" height="756">
+        </picture>
+      </div>
+      <div class="animation__gap"></div>
+      <div class="animation__layer"></div>
+    </div>
+
+    <div class="voice__img">
+      <picture>
+        <source type="image/webp" srcset="images/interface.webp, images/interface@2x.webp 2x">
+        <img loading="lazy" src="images/interface.png" srcset="images/interface@2x.png 2x" alt="Интерфейс голосового управления" width="842" height="867">
+      </picture>
+    </div>
+
+    <p class="voice__say"><b>СКАЖИ</b>:</p>
+    <p class="voice__yamaguchi">«<b>ОКЕЙ</b>, <span><b>ЯМАГУЧИ</b>»</span></p>
+  </section>
+</body>
+</html>

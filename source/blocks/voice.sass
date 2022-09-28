@@ -1,0 +1,75 @@
+.voice
+    display: flex
+    flex-direction: column
+    z-index: 2
+    
+.voice__title
+    margin: 0
+    margin-bottom: 2rem
+    +font(2.125rem, 1)
+    font-weight: 400
+
+.voice__text
+    margin: 0
+    & + &
+        margin-top: 2rem
+
+.voice__img
+    align-self: center
+    width: calc($mobile-width-rem - 4*$xs)
+    height: 390px
+    margin-top: 2rem
+    & img
+        transform: translateX(3px) scale(1.3)
+
+.voice__say
+    margin: 0
+    margin-bottom: 0.5rem
+    +font(2.375rem, calc(35/38))
+
+.voice__yamaguchi
+    margin: 0
+    +font(3.8rem, calc(55/61))
+    & span
+        +font(3.125rem, calc(44/50))
+
+@media (min-width: $desktop-width)
+    .voice
+        display: grid
+        grid-template-columns: 36% auto auto
+        grid-template-rows: repeat(4, min-content) 1fr
+        column-gap: 1rem
+
+    .voice__title,
+    .voice__text,
+    .voice__say
+        grid-column: 1/2
+
+    .voice__title
+        width: 70%
+        margin: 4rem 0
+        +font(3.5rem, calc(60/56))
+
+    .voice__text
+        +font(1.375rem, calc(37/22))
+        & + &
+            margin-top: 1.2rem
+
+    .voice__say
+        margin: 2.5rem 0
+        +font(2.8rem, calc(40/45))
+
+    .voice__yamaguchi
+        grid-column: 1/3
+        grid-row: 5/6
+        margin-left: 3rem
+        & span
+            +font(3.8rem, calc(55/61))
+
+    .voice__img
+        grid-column: 3/4
+        grid-row: 1/6
+        width: 700px
+        height: auto
+        & img
+            transform: scale(1)

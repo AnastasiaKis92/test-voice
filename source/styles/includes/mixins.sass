@@ -1,0 +1,35 @@
+@mixin font($font-size, $line-height)
+    font-size: $font-size
+    line-height: $line-height
+
+@mixin Montserrat-900
+    font-family: "Montserrat-Black", "Arial", sans-serif
+    font-weight: 900
+
+@mixin reset-list
+    margin: 0
+    padding: 0
+    list-style: none
+
+@mixin reset-btn
+    padding: 0
+    background-color: transparent
+    border: none
+    cursor: pointer
+
+// Центрирование
+@mixin align-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin align-top
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+@mixin align-left
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
