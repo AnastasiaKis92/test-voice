@@ -12,20 +12,16 @@
     color: $white
     background-color: $black-1
 
-// @media (min-width: $desktop-width)
-//     .page__body
-//         // background-image: radial-gradient($bg-color 20%, $black-1 20%)
-//         // background-position: 0 0
-//         // background-size: 25px 25px
-//         &::before
-//             position: absolute
-//             content: ''
-//             top: -3px
-//             left: -6px
-//             width: 1920px
-//             height: 1200px
-//             mask-image: url("../images/svg-sprites/sprite.svg#bg")
-//             mask-repeat: repeat
-//             mask-size: 25px 25px
-//             background-color: $white
-//             // z-index: 4
+@media (min-width: $desktop-width)
+    .page__body
+        position: relative
+        &::before
+            position: absolute
+            content: ''
+            top: -19px
+            width: 1920px
+            height: 100vh
+            mask-image: url("../images/svg-sprites/sprite.svg#bg")
+            mask-size: 36px 36px
+            background-color: $bg-color
+            z-index: -1

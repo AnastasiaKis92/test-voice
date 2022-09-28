@@ -10,9 +10,12 @@
 
 @keyframes move-gap
     from
-        opacity: 0
+        opacity: 0.5
+    25%
+        opacity: 0.6
     50%
         width: 280px
+        opacity: 0.8
     to
         opacity: 1
 
@@ -39,7 +42,7 @@
         animation-name: move-gap
         animation-duration: 6.2s
         animation-timing-function: easeOutSine
-        z-index: -2
+        z-index: -1
 
 .animation__girl
     position: relative
@@ -50,7 +53,7 @@
     animation-direction: alternate
     animation-iteration-count: infinite
     animation-timing-function: ease-in-out
-    z-index: -1
+    z-index: 1
     & img
         transform: translateY(843px)
         animation-name: move-girl
@@ -58,7 +61,6 @@
         animation-delay: 1s
         animation-fill-mode: forwards
         animation-timing-function: ease-in-out
-        z-index: -3
 
 .animation__layer
     position: absolute
@@ -67,16 +69,17 @@
     width: 320px
     height: 830px
     transform: translate(-50%, 0)
-    background-image: url('../images/rectangle.png')
     background-repeat: no-repeat
     background-position: center
-    z-index: -1
+    background-image: url('../images/rectangle.png')
+    z-index: 2
 
 @media (min-width: $desktop-width)
     .animation
         grid-column: 2/3
         grid-row: 1/6
         justify-self: center
+        transform: translateX(45px)
 
     .animation__girl
         width: 435px
@@ -84,5 +87,16 @@
         text-align: center
 
     .animation__layer
-        top: 781px
+        top: 780px
+
+    .animation__overlay
+        z-index: 3
+        width: 1920px
+        height: 200px
+        position: absolute
+        bottom: -106px
+        left: -748px
+        background-image: url('../images/layer.png')
+        mask-image: url("../images/svg-sprites/sprite.svg#bg")
+        mask-size: 36px 36px
 
