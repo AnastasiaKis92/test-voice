@@ -74,7 +74,7 @@
     background-image: url('../images/rectangle.png')
     z-index: 2
 
-@media (min-width: $desktop-width)
+@media (min-width: $tablet-width)
     .animation
         grid-column: 2/3
         grid-row: 1/6
@@ -89,14 +89,12 @@
     .animation__layer
         top: 780px
 
+@media (min-width: $desktop-width)
     .animation__overlay
         z-index: 3
-        width: 1920px
+        width: $desktop-width
         height: 200px
         position: absolute
-        bottom: -106px
-        left: -748px
-        background-image: url('../images/layer.png')
+        bottom: -11%
+        left: -171%
         mask-image: url("../images/svg-sprites/sprite.svg#bg")
-        mask-size: 36px 36px
-

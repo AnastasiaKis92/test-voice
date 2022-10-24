@@ -33,7 +33,7 @@
     & span
         +font(3.125rem, calc(44/50))
 
-@media (min-width: $desktop-width)
+@media (min-width: $tablet-width)
     .voice
         display: grid
         grid-template-columns: 36% auto auto
@@ -69,7 +69,11 @@
     .voice__img
         grid-column: 3/4
         grid-row: 1/6
-        width: 700px
+        width: 500px
         height: auto
         & img
-            transform: scale(1)
+            transform: translateX(60px) scale(1)
+
+@media (min-width: $desktop-width)
+    .voice__img
+        width: 600px

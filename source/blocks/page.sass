@@ -12,16 +12,3 @@
     color: $white
     background-color: $black-1
 
-@media (min-width: $desktop-width)
-    .page__body
-        position: relative
-        &::before
-            position: absolute
-            content: ''
-            top: -19px
-            width: 1920px
-            height: 100vh
-            mask-image: url("../images/svg-sprites/sprite.svg#bg")
-            mask-size: 36px 36px
-            background-color: $bg-color
-            z-index: -1
